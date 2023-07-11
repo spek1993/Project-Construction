@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: service
+metadata:
+name: sprint-boot_devops
+spec:
+type: LoadBalancer
+selector: 
+app: serving-web-content-complete
+ports:
+- protocal: "TCP"
+ports: 8080
+targetPort: 8084

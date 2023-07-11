@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata: 
+name: sprint-boot-devopslab4=deployment
+
+spec:
+selector:
+matchLabels:
+app: serving-web-contect-complete
+replicas: 2 # Number of replicas that will be created for this deployment
+template:
+metadata:
+labels:
+app: serving-web-content-complete
+spec
+containers:
+- name: serving-web-content-complete
+unage: spek1993/devopsimage1 # image that will be used to containers in the cluster
+imagePullPolicy: ifNotPresent
+ports:
+- contianerPort: 8080 # The port that the container is running on in the cluster
